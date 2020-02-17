@@ -11,5 +11,6 @@ public class Jumper {
             jumpHeight++;
         }
         return jumpHeight;
+        //only got one test to pass lol...
     }
 }
