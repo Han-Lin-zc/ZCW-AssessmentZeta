@@ -34,7 +34,7 @@ public class ArrayUtils {
             }
         }
 
-        Integer[] newArr = new Integer[counter + 1];
+        Integer[] newArr = new Integer[counter];
         int index = 0;
         for (Object o : objectArray) {
             if (o != objectToRemove) {
@@ -43,7 +43,6 @@ public class ArrayUtils {
             }
         }
 
-        newArr[newArr.length - 1] = (Integer) objectArray[objectArray.length - 1];
         return newArr;
 
     }
