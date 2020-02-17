@@ -19,25 +19,15 @@ public abstract class Pet implements Animal {
         this.age = Integer.MAX_VALUE;
     }
 
-    /**
-     * @param name name of this pet
-     */
     public Pet(String name) {
         this.name = name;
     }
 
-
-    /**
-     * @param age age of this pet
-     */
     public Pet(int age) {
         this.age = Integer.MAX_VALUE;
     }
 
-    /**
-     * @param name name of this pet
-     * @param age age of this pet
-     */
+
     public Pet(String name, int age) {
         this.name = name;
         this.age = Integer.MAX_VALUE;
