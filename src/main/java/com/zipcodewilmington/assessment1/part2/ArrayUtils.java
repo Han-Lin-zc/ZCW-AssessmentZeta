@@ -36,12 +36,14 @@ public class ArrayUtils {
 
         Integer[] newArr = new Integer[counter + 1];
         int index = 0;
-        for (int i = 0; i < objectArray.length; i++) {
-            if (objectArray[i] != objectToRemove) {
-                newArr[index] = (Integer) objectArray[i];
+        for (Object o : objectArray) {
+            if (o != objectToRemove) {
+                newArr[index] = (Integer) o;
                 index++;
             }
         }
+
+        newArr[newArr.length - 1] = (Integer) objectArray[objectArray.length - 1];
         return newArr;
 
     }
