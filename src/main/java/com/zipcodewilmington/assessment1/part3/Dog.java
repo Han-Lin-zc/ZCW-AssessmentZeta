@@ -11,19 +11,21 @@ public class Dog extends Pet {
 
 
     public Dog(String name, Integer age) {
-
+        super(name, age);
     }
 
     /**
      * @param age age of this dog
      */
     public Dog(Integer age) {
+        super(age);
     }
 
     /**
      * @param name name of this dog
      */
     public Dog(String name) {
+        super(name);
 
     }
 
@@ -33,13 +35,19 @@ public class Dog extends Pet {
      * name is DogName
      * age is 0
      */
-    public Dog() {
+    public Dog(String name, Integer age, PetOwner owner) {
+        super(name, age, owner);
     }
 
+    public Dog() {
+
+    }
     /**
      * @return bark as a string
      */
+
+    @Override
     public String speak() {
-        return null;
+        return "Bark";
     }
 }
