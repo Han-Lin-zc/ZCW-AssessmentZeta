@@ -34,9 +34,6 @@ public class Dog extends Pet {
      * name is DogName
      * age is 0
      */
-    public Dog(String name, Integer age, PetOwner owner) {
-        super(name, age, owner);
-    }
 
     public Dog() {
         super("Dog name");

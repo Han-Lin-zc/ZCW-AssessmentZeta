@@ -21,8 +21,10 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        String[] arr = sentence.split(" ");
-        return arr[0];
+//        String[] arr = sentence.split(" ");
+//        return arr[0];
+
+        return getWords(sentence)[0];
     }
 
     /**
@@ -39,6 +41,8 @@ public class StringUtils {
             newWord.append(word.charAt(i));
         }
         return newWord.toString();
+
+        // return BasicStringUtils.reverse(getFirstWord(sentence));
     }
 
     /**
@@ -49,6 +53,8 @@ public class StringUtils {
     public static String reverseFirstWordThenCamelCase(String sentence) {
         String word = reverseFirstWord(sentence);
         return word.substring(0,1).toUpperCase() + word.substring(1).toLowerCase();
+
+        // return BasicStringUtils.camelCase(reverseFirstWord(sentence));
     }
 
 
@@ -62,6 +68,8 @@ public class StringUtils {
         StringBuilder sb = new StringBuilder(str);
         sb.deleteCharAt(index);
         return sb.toString();
+
+        // return str.substring(0, index) + str.substring(index + 1);
     }
 
 }

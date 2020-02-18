@@ -15,42 +15,39 @@ public abstract class Pet implements Animal {
 
 
     public Pet() {
-        this.name = "";
         this.age = 0;
+        this.name = "";
     }
 
     public Pet(String name) {
+        this.age = 0;
         this.name = name;
     }
 
     public Pet(int age) {
-        this.age = Integer.MAX_VALUE;
+        this.age = age;
+        this.name = "";
     }
 
 
     public Pet(String name, int age) {
         this.name = name;
-        this.age = Integer.MAX_VALUE;
+        this.age = age;
     }
 
-    public Pet(String name, Integer age, PetOwner owner) {
-        this.name = name;
-        this.age = Integer.MAX_VALUE;
-        this.owner = owner;
-    }
 
     /**
      * @return name of this pet
      */
     public String getName() {
-        return name;
+        return this.name;
     }
 
     /**
      * @return age of this pet
      */
     public Integer getAge() {
-        return age;
+        return this.age;
     }
 
     /**
@@ -65,6 +62,6 @@ public abstract class Pet implements Animal {
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
-        return owner;
+        return this.owner;
     }
 }
