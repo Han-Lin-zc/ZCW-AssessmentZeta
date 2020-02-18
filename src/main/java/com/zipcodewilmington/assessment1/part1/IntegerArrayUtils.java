@@ -9,11 +9,15 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        Integer x = 0;
-        for (int i = 0; i < intArray.length; i++) {
-            x += intArray[i];
-        }
-        return x;
+//        Integer x = 0;
+//        for (int i = 0; i < intArray.length; i++) {
+//            x += intArray[i];
+//        }
+//        return x;
+
+         Integer s = 0;
+         for (Integer i : intArray) s += i;
+         return s;
     }
 
     /**
@@ -38,5 +42,7 @@ public class IntegerArrayUtils {
             x += intArray[i];
         }
         return x / 5;
+
+        // return Double.valueOf (getSum(intArray) / intArray.length);
     }
 }

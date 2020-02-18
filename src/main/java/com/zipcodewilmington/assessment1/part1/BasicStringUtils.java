@@ -22,6 +22,13 @@ public class BasicStringUtils {
             newStr.append(str.charAt(i));
         }
         return newStr.toString();
+        //return new StringBuilder(str).reverse().toString();
+
+//        String newStr = "";
+//        for (int i = str.length() - 1; i >= 0 ; i--) {
+//            newStr += str.charAt(i);
+//        }
+//        return newStr;
     }
 
     /**
@@ -31,6 +38,8 @@ public class BasicStringUtils {
     public static String reverseThenCamelCase(String str) {
         String s = reverse(str);
         return s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
+
+        //return camelCase(reverse(str));
     }
 
 
@@ -47,12 +56,15 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
+
         char[] array = str.toCharArray();
+
         for (int i = 0; i < array.length; i++) {
             char c = array[i];
             if (Character.isUpperCase(c)) {
                 array[i] = Character.toLowerCase(c);
-            } else if (Character.isLowerCase(c)) {
+            }
+            else if (Character.isLowerCase(c)) {
                 array[i] = Character.toUpperCase(c);
             }
         }

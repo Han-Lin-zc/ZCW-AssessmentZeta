@@ -35,12 +35,8 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
-        Integer x = 0;
-        while(val != 0) {
-            int i = val % 10;
-            x = x * 10 + i;
-            val /= 10;
-        }
-        return x;
+        String s = Integer.toString(val);
+        s = BasicStringUtils.reverse(s);
+        return new Integer(s);
     }
 }
