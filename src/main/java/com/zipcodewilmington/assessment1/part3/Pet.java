@@ -16,7 +16,7 @@ public abstract class Pet implements Animal {
 
     public Pet() {
         this.name = "";
-        this.age = Integer.MAX_VALUE;
+        this.age = 0;
     }
 
     public Pet(String name) {
