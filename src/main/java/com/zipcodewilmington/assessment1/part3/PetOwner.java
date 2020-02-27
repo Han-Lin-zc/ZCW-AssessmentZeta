@@ -8,6 +8,7 @@ import java.util.ArrayList;
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
+
     private String name;
     private ArrayList<Pet> pets = new ArrayList<>();
 
@@ -79,6 +80,7 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
+
         Integer[] ages = new Integer[this.pets.size()];
         for (int i = 0; i < this.pets.size(); i++) {
             ages[i] = this.pets.get(i).getAge();

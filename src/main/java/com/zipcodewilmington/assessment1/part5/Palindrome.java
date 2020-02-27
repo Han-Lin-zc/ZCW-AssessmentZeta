@@ -21,4 +21,8 @@ public class Palindrome {
     public static boolean isPalindromic(String str) {
         return str.equals(BasicStringUtils.reverse(str));
     }
+
+    public static String reverseStr(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
 }
